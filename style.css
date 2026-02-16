@@ -496,3 +496,67 @@ a {
 }
 
 .delay-float { animation-delay: 3s; }
+
+/* Pricing */
+.pricing {
+    background-color: var(--background-light);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.pricing-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 15px 0;
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--text-color);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.btn-sm {
+    padding: 8px 20px;
+    font-size: 0.875rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    border-radius: 50px;
+    cursor: pointer;
+}
