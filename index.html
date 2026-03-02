@@ -64,7 +64,7 @@
     <!-- Lottie Player -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body class="font-inter min-h-screen transition-colors duration-300">
+<body class="font-inter min-h-screen transition-colors duration-300 light-mode">
 
     <!-- ==================== HEADER ==================== -->
     <header class="fixed top-0 left-0 w-full z-[1000] header-bg backdrop-blur-lg shadow-md">
@@ -79,13 +79,13 @@
                     <li><a href="#pricing" class="font-medium text-sm nav-link">Pricing</a></li>
                     <li><a href="#testimonials" class="font-medium text-sm nav-link">Testimonials</a></li>
                     <li><a href="#contact" class="nav-btn-contact">Contact Sales</a></li>
-                    <li><button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode"><i id="theme-icon" class="fa-solid fa-moon"></i></button></li>
+                    <li><button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode"><i id="theme-icon" class="fa-solid fa-sun"></i></button></li>
                 </ul>
             </nav>
 
             <!-- Mobile: theme toggle + hamburger -->
             <div class="flex items-center gap-3 md:hidden">
-                <button id="theme-toggle-mobile" class="btn-icon" aria-label="Toggle Dark Mode"><i id="theme-icon-mobile" class="fa-solid fa-moon"></i></button>
+                <button id="theme-toggle-mobile" class="btn-icon" aria-label="Toggle Dark Mode"><i id="theme-icon-mobile" class="fa-solid fa-sun"></i></button>
                 <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle Menu">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -399,7 +399,7 @@
     </div>
 
     <!-- ==================== MASCOT (Lottie Chef) ==================== -->
-    <div id="mascot-container" class="fixed bottom-16 right-2 md:bottom-8 md:right-8 z-[998] hidden">
+    <div id="mascot-container" class="group fixed bottom-16 right-2 md:bottom-8 md:right-8 z-[998] hidden">
         <!-- Speech Bubble (shown on hover) -->
         <div id="mascot-bubble" class="mascot-bubble absolute -top-16 right-0 md:-top-24 md:-right-2 w-[180px] md:w-[240px] opacity-0 pointer-events-none transition-opacity duration-300">
             <div class="bg-white text-gray-900 text-[11px] md:text-sm px-3 py-2 md:px-4 md:py-3 rounded-2xl shadow-xl relative font-medium">
@@ -409,7 +409,7 @@
         </div>
 
         <!-- Dismiss button -->
-        <button id="mascot-close" class="absolute -top-1 -right-1 md:-top-3 md:-right-3 w-5 h-5 md:w-7 md:h-7 rounded-full bg-gray-800 border border-white/30 text-white text-[10px] md:text-xs flex items-center justify-center hover:bg-red-500 transition-colors cursor-pointer z-10" aria-label="Dismiss mascot"><i class="fa-solid fa-xmark"></i></button>
+        <button id="mascot-close" class="absolute -top-1 -right-1 md:-top-3 md:-right-3 w-5 h-5 md:w-7 md:h-7 rounded-full bg-gray-800 border border-white/30 text-white text-[10px] md:text-xs flex items-center justify-center hover:bg-red-500 transition-all duration-200 cursor-pointer z-10 opacity-0 group-hover:opacity-100" aria-label="Dismiss mascot"><i class="fa-solid fa-xmark"></i></button>
 
         <!-- Lottie Player -->
         <div class="mascot-animation cursor-pointer" id="mascot-lottie-wrapper">
@@ -446,11 +446,12 @@
 
         function applyTheme() {
             const saved = localStorage.getItem('theme');
-            if (saved === 'light') {
+            if (saved === 'dark') {
+                body.classList.remove('light-mode');
+                setThemeIcons(false);
+            } else {
                 body.classList.add('light-mode');
                 setThemeIcons(true);
-            } else {
-                setThemeIcons(false);
             }
         }
         applyTheme();
