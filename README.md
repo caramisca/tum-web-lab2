@@ -1,6 +1,6 @@
 # SmartDine - Restaurant Payment Platform
 
-A modern, responsive landing page for SmartDine, a cutting-edge restaurant payment and ordering platform that revolutionizes the dining experience through seamless digital transactions and table management.
+A modern, responsive landing page for SmartDine, a cutting-edge restaurant payment and ordering platform built with **Tailwind CSS**. Features a mobile-first responsive design, Lottie mascot integration, and seamless dark/light theme switching.
 
 ## 🚀 Live Demo
 
@@ -14,54 +14,44 @@ SmartDine is a comprehensive solution designed for modern restaurants, enabling:
 - **Real-time analytics** for data-driven business decisions
 - **Integrated loyalty programs** to boost customer retention
 
-This landing page showcases the platform's features with a sleek, cosmic-themed dark mode design and smooth animations.
+This landing page showcases the platform's features with a mobile-first responsive layout, Tailwind CSS utility classes, a Lottie chef mascot, and cosmic-themed dark mode design with smooth animations.
 
 ## ✨ Features
 
-- 🎨 **Dark/Light Mode Toggle** - Seamless theme switching with localStorage persistence
-- 📱 **Fully Responsive Design** - Optimized for mobile, tablet, and desktop
-- 🎠 **Infinite Carousel Animation** - Smooth scrolling feature showcase
-- ⚡ **Modern CSS Animations** - Fade-in effects and floating elements
-- 🎯 **Clean UI/UX** - Professional design with glassmorphism effects
-- 📊 **Interactive Sections** - Pricing cards, testimonials, and FAQ
-- 🔤 **Custom Typography** - Inter font family for modern aesthetics
+- 🎨 **Dark/Light Mode Toggle** — Seamless theme switching with localStorage persistence (synced desktop + mobile)
+- 📱 **Mobile-First Responsive Design** — Tailwind CSS breakpoints (sm/md/lg) with mobile-specific elements
+- 🍳 **Lottie Chef Mascot** — Animated mascot with 3s delay entrance, hover speech bubble, and dismissible UI
+- 🎠 **Infinite Carousel Animation** — Smooth scrolling feature showcase with hover-to-pause
+- 📲 **Mobile-Only Elements** — QR badge, app download banner, sticky CTA, and hamburger menu
+- ⚡ **Modern Animations** — Fade-in-up, floating stats, bounce-in mascot, and carousel marquee
+- 🎯 **Clean UI/UX** — Glassmorphism cards, responsive pricing grid, and accessible touch targets
+- 📊 **Interactive Sections** — Pricing cards, testimonials, FAQ, and newsletter signup
+- 🔤 **Custom Typography** — Inter font family with responsive sizing scale
 
 ## 🛠️ Technologies Used
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, Grid, Flexbox, Animations
-- **Vanilla JavaScript** - Theme toggle functionality
-- **Font Awesome** - Professional icon library via CDN
-- **Google Fonts** - Inter typeface
-- **Vercel** - Deployment platform
-
-## Features
-
-### Hero Section - Dark Mode
-![Hero Section Dark](screenshots/hero-dark.png)
-*Modern hero section with phone mockup visualization*
-
-### Features Carousel
-![Features Carousel](screenshots/features.png)
-*Infinite scrolling carousel showcasing key features*
-
-### Pricing Section
-![Pricing](screenshots/pricing.png)
-*Three-tier pricing structure with featured plan*
-
-### Light Mode
-![Light Mode](screenshots/light-mode.png)
-*Clean light theme alternative*
+- **Tailwind CSS** — Utility-first CSS framework (CDN with custom config)
+- **HTML5** — Semantic markup with responsive meta viewport
+- **CSS3** — Custom properties for theming, companion stylesheet for complex components
+- **Vanilla JavaScript** — Theme toggle, mobile menu, mascot interactions
+- **Lottie Web** — `@lottiefiles/lottie-player` for chef mascot animation
+- **Font Awesome 6.5.1** — Professional icon library via CDN
+- **Google Fonts** — Inter typeface (weights 300–800)
+- **Vercel** — Deployment platform with automatic deploys
 
 ## 🎯 Sections
 
-1. **Hero** - Eye-catching introduction with CTA buttons
-2. **Features** - Animated carousel with 4 core features
-3. **How It Works** - Benefits and statistics
-4. **Pricing** - Three-tier pricing plans (Starter, Growth, Enterprise)
-5. **Testimonials** - Customer success stories
-6. **FAQ** - Common questions and answers
-7. **Footer** - Links, newsletter signup, and contact information
+1. **Header** — Fixed navbar with responsive hamburger menu and theme toggle
+2. **Hero** — Eye-catching introduction with phone mockup, mobile-only QR badge, and CTA buttons
+3. **Mobile Banner** — App download prompt (mobile-only)
+4. **Features** — Infinite carousel with 4 feature cards (duplicated for seamless scroll)
+5. **How It Works** — Benefits checklist with animated floating stat cards
+6. **Pricing** — Three-tier responsive grid (Starter, Growth, Enterprise) with featured highlight
+7. **Testimonials** — Customer success stories in card layout
+8. **FAQ** — Common questions in responsive two-column grid
+9. **Footer** — Links, newsletter signup, and copyright
+10. **Mobile Sticky CTA** — Fixed bottom call-to-action (mobile-only)
+11. **Chef Mascot** — Lottie animation with speech bubble and dismiss functionality
 
 ## 🚀 Deployment
 
@@ -88,6 +78,18 @@ cd tum-web-lab2
 # (No build process required - static site)
 ```
 
+## 📁 Project Structure
+
+```
+tum-web-lab2/
+├── index.html              # Main page (Tailwind CSS + responsive layout)
+├── style.css               # Companion stylesheet (theme vars, carousel, mascot)
+├── Chef animation.json     # Lottie mascot animation data
+├── vercel.json             # Vercel deployment config
+├── README.md               # Project documentation
+└── screenshots/            # App mockup images
+```
+
 ## 🎨 Color Palette
 
 **Dark Mode (Default)**
@@ -101,9 +103,18 @@ cd tum-web-lab2
 - Primary: `#0f172a` (Dark slate)
 - Text: `#1f2937` (Dark gray)
 
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Width  | Target       |
+|------------|--------|-------------|
+| Default    | < 640px | Mobile      |
+| `sm:`      | ≥ 640px | Large phone |
+| `md:`      | ≥ 768px | Tablet      |
+| `lg:`      | ≥ 1024px| Desktop     |
+
 ## 📄 License
 
-This project is part of a web development course assignment.
+This project is part of a web development course assignment (Lab 2 → Lab 3).
 
 ## 👨‍💻 Author
 
